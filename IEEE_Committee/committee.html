@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Committee Members</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #d2e0ec;
+            /* Smoke white background color */
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            /* Center the title */
+            margin-bottom: 20px;
+        }
+
+        .accordion {
+            margin: 0 auto;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .accordion-section {
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion-header {
+            background-color: #224e7d;
+            /* color */
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px 5px 0 0;
+            transition: background-color 0.3s;
+            cursor: default;
+            /* Default cursor for committee headers */
+        }
+
+        .accordion-header:hover {
+            background-color: #546d7e;
+            /* on hover */
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 15px;
+            border-top: 1px solid #ccc;
+        }
+
+        .accordion-content ul {
+            margin: 10px 0;
+            padding-left: 20px;
+            /* Adjust left padding for bullets */
+        }
+
+        .accordion-content ul li {
+            margin: 5px 0;
+            /* Add margin between list items */
+        }
+
+        button {
+            background-color: #fff;
+            color: #224e7d;
+            border: 1px solid #224e7d;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            /* Pointer cursor for buttons */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        button:hover {
+            background-color: #224e7d;
+            color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            .accordion-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            button {
+                margin-top: 10px;
+                align-self: flex-end;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Committee Members</h1>
+    <div class="accordion">
+        <div class="accordion-section">
+            <div class="accordion-header">
+                Chief Patron
+                <button onclick="toggleAccordion(this)">Click Here</button>
+            </div>
+            <div class="accordion-content">
+                <ul>
+                    <li>President of CUTM: Prof. Dr. Muktikanta Mishra </li>
+                    <li>Vice-President of CUTM: Prof. Dr. D.N Rao</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Add more sections for other roles and committees -->
+
+        <div class="accordion-section">
+            <div class="accordion-header">
+                General Chair
+                <button onclick="toggleAccordion(this)">Click Here</button>
+            </div>
+            <div class="accordion-content">
+                <ul>
+                    <li>VC of CUTM: Prof. Dr. Supriya Pattnayak</li>
+                    <li>Registrar of CUTM: Prof. Dr. Anita Patra</li>
+                    <li>IIIB: Prof. Dr. Subranshu Samantaray</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="accordion-section">
+            <div class="accordion-header">
+                Honourary Chair
+                <button onclick="toggleAccordion(this)">Click Here</button>
+            </div>
+            <div class="accordion-content">
+                <ul>
+                    <li>Ex-Deputy Director IIIB: Prof. Dr. Ganapati Panda</li>
+                    <li> PCIL,Govt. of India: Prof. A.K Tripathy</li>
+                    <li>Prof. Dr. Okyay Kaynak, Istnabul, Turkey</li>
+                    <li>Huijen Gao, HIT, China</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="accordion-section">
+            <div class="accordion-header">
+                Program Chair
+                <button onclick="toggleAccordion(this)">Click Here</button>
+            </div>
+            <div class="accordion-content">
+                <ul>
+                    <li>Dr. Prafulla Panda,Dean,SoET,CUTM</li>
+                    <li>Dr. DK Sahoo, ASSOC.Prof,ECE,CUTM</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="accordion-section">
+            <div class="accordion-header">
+                Finance Chair
+                <button onclick="toggleAccordion(this)">Click Here</button>
+            </div>
+            <div class="accordion-content">
+                <ul>
+                    <li>prof.Sandipan Pine</li>
+                    <li>Prof.K.C.Sethi</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="accordion-section">
+            <div class="accordion-header">
+                Track Chair
+                <button onclick="toggleAccordion(this)">Click Here</button>
+            </div>
+            <div class="accordion-content">
+                <ul>
+                    <li>Dr.Ramesh Mohanty</li>
+                    <li>Dr.S.K Biswal</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="accordion-section">
+            <div class="accordion-header">
+                Convenor
+                <button onclick="toggleAccordion(this)">Click Here</button>
+            </div>
+            <div class="accordion-content">
+                <ul>
+                    <li>Prof. Dr. Ashok Mishra</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Add more sections for other roles and committees -->
+
+        <div class="accordion-section">
+            <div class="accordion-header">
+                Co-Convenor
+                <button onclick="toggleAccordion(this)">Click Here</button>
+            </div>
+            <div class="accordion-content">
+                <ul>
+                    <li>prof.Dr.Mihir N Mohanty</li>
+                    <li>Prof.Pravat Pattnaik</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- Add more sections for other roles and committees -->
+        <div class="accordion-section">
+            <div class="accordion-header">
+                Publication Committee
+                <button onclick="toggleAccordion(this)">Click Here</button>
+            </div>
+            <div class="accordion-content">
+                <ul>
+                    <li>Dr. P.K Sahoo, IIIB</li>
+                    <li>Dr. Ramesh Ch, Mohanty</li>
+                    <li>Dr. Abishek Das (Chair)</li>
+                    <li>Dr. Satya N Dhal (Phy)</li>
+                    <li>Dr. Abinash Ratha</li>
+                    <li>Dr. Prajna P.Pradhan</li>
+                    <li>Dr. Satyajit Mishra (Mech)</li>
+                    <li>Dr. Sagar Maitra (Ag)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="accordion-section">
+            <div class="accordion-header">
+                Organising Committee
+                <button onclick="toggleAccordion(this)">Click Here</button>
+            </div>
+            <div class="accordion-content">
+                <ul>
+                    <li>Prof.Prafulla Panda</li>
+                    <li>Prof.Durga Pandhi</li>
+                    <li>Prof.S.P Nanda</li>
+                    <li>Prof.Prajna Pani</li>
+                    <li>Prof.Debendra Reddy</li>
+                    <li>Prof.Ashok Mishra</li>
+                    <li>Prof.DK Shaoo</li>
+                    <li>Prof.Sagar Maitra</li>
+                    <li>Prof.Pravat Pattnaik</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="accordion-section">
+            <div class="accordion-header">
+                Registration Committee
+                <button onclick="toggleAccordion(this)">Click Here</button>
+            </div>
+            <div class="accordion-content">
+                <ul>
+                    <li>Prof.G.K Sahu</li>
+                    <li>Prof.Jeevarathnam</li>
+                    <li>Prof.Subhashree Prtichhanda</li>
+                    <li>Prof.Rajesh Majhi</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="accordion-section">
+            <div class="accordion-header">
+                Local Organising Committee
+                <button onclick="toggleAccordion(this)">Click Here</button>
+            </div>
+            <div class="accordion-content">
+                <ul>
+                    <li>Prof.Durga Padhi</li>
+                    <li>Prof.Satyanarayana Padhi</li>
+                    <li>Prof.Girish Rath</li>
+                    <li>Prof.Susanta pattnaik</li>
+                    <li>Prof.Jagannath Pandhi</li>
+                    <li>Prof.kalayan Chakravathy</li>
+                    <li>Prof.Sushant Pattnaik</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+        function toggleAccordion(button) {
+            const content = button.parentElement.nextElementSibling;
+            const isActive = content.style.display === "block";
+            document.querySelectorAll('.accordion-content').forEach(section => {
+                section.style.display = "none";
+            });
+            content.style.display = isActive ? "none" : "block";
+        }
+    </script>
+</body>
+
+</html>
