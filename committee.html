@@ -8,85 +8,71 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Committee Members</title>
     <style>
-        body {
+       body {
             font-family: Arial, sans-serif;
-            background-color: #dae0e6;
             margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .header {
+            background-color: #224e7d;
+            color: white;
             padding: 20px;
-        }
-
-        h1 {
             text-align: center;
-            margin-bottom: 20px;
         }
 
-        .card-container {
+        .committee-section {
+            margin: 20px;
+            background-color: #ffffff;
+            border: 2px solid #224e7d;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            background-color: #224e7d;
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+            border-bottom: 2px solid #92deed;
+            text-align: center;
+            margin: 0;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+        }
+
+        .committee-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
-        }
-
-        .card {
-            flex: 1 1 300px; /* Make the cards responsive */
-            max-width: 300px; /* Ensure max width for the cards */
-            padding: 15px;
-            background-color: #336a75; /* Light color for the card background */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            color: black;
-            transition: background-color 0.3s, transform 0.3s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .card:hover {
-            background-color: #92adb3;
-            transform: translateY(-5px);
-        }
-
-        .card-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .committee-list {
-            list-style-type: disc;
             padding: 10px;
-            background-color: #fff; /* Set background color to white */
-            color: black;
+        }
+
+        .member {
+            background-color: #ffffff;
+            border: 2px solid #003366;
             border-radius: 5px;
-            text-align: left;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            overflow-y: auto;   
-            list-style-type: circle; /* bullet points */
-            padding-left: 20px;
+            margin: 10px;
+            width: 45%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .committee-list li {
-            margin-bottom: 10px;
+        .member-title {
+            background-color: #419cbd;
+            color: #003366;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 1px solid #003366;
         }
 
-        .tall-card {
-            flex: 1 1 300px;
-            max-width: 300px;
-            height: 390px; /* Card size */
+        .member-institution {
+            background-color: whitesmoke;
+            color: #003366;
+            padding: 15px;
+            font-size: 16px;
         }
-
-        @media (max-width: 768px) {
-            .card, .tall-card {
-                max-width: 100%; /* Full width on smaller screens */
-            }
-        }
-
 
 
         .mobile-toggler .fa-bars,
@@ -250,128 +236,234 @@
    
     <br><br><br><br>
 
-    <h1 class="text-4xl text-gray-900">Committee Members</h1>
-    <br><br><br>
-    <div class="card-container">
-        <div class="card">
-            <div class="card-title">Chief Patron</div>
-            <ul class="committee-list">
-                <li>President of CUTM: Prof. Dr. Muktikanta Mishra</li>
-                <li>Vice-President of CUTM: Prof. Dr. D.N Rao</li>
-            </ul>
-        </div>
+    <div class="header">
+        <h1>Committee Members</h1>
+    </div>
 
-        <div class="card">
-            <div class="card-title">General Chair</div>
-            <ul class="committee-list">
-                <li>VC of CUTM: Prof. Dr. Supriya Pattnayak</li>
-                <li>Registrar of CUTM: Prof. Dr. Anita Patra</li>
-                <li>IIIB: Prof. Dr. Subranshu Samantaray</li>
-            </ul>
+    <div class="committee-section">
+        <h2 class="section-title">CHIEF PATRON</h2>
+        <div class="committee-container">
+            <div class="member">
+                <div class="member-title">Prof. Dr. Muktikanta Mishra</div>
+                <div class="member-institution">President of CUTM</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. Dr. D.N Rao</div>
+                <div class="member-institution">Vice-President of CUTM</div>
+            </div>
         </div>
+    </div>
 
-        <div class="card">
-            <div class="card-title">Honourary Chair</div>
-            <ul class="committee-list">
-                <li>Ex-Deputy Director IIIB: Prof. Dr. Ganapati Panda</li>
-                <li>PCIL, Govt. of India: Prof. A.K Tripathy</li>
-                <li>Prof. Dr. Okyay Kaynak, Istanbul, Turkey</li>
-                <li>Huijen Gao, HIT, China</li>
-            </ul>
+    <div class="committee-section">
+        <h2 class="section-title">GENERAL CHAIR</h2>
+        <div class="committee-container">
+            <div class="member">
+                <div class="member-title">Prof. Dr. Supriya Pattnayak</div>
+                <div class="member-institution">VC of CUTM</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. Dr. Anita Patra</div>
+                <div class="member-institution">Registrar of CUTM</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. Dr. Subranshu Samantaray</div>
+                <div class="member-institution">IIIB</div>
+            </div>
         </div>
+    </div>
 
-        <div class="card">
-            <div class="card-title">Program Chair</div>
-            <ul class="committee-list">
-                <li>Dr. Prafulla Panda, Dean, SoET, CUTM</li>
-                <li>Dr. DK Sahoo, Assoc. Prof, ECE, CUTM</li>
-            </ul>
+    <div class="committee-section">
+        <h2 class="section-title">HONOURARY CHAIR</h2>
+        <div class="committee-container">
+            <div class="member">
+                <div class="member-title">Prof. Dr. Ganapati Panda</div>
+                <div class="member-institution">Ex-Deputy Director IIIB</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. A.K Tripathy</div>
+                <div class="member-institution">PCIL (Govt. of India)</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. Dr. Okyay Kaynak</div>
+                <div class="member-institution">Istanbul, Turkey</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Huijen Gao</div>
+                <div class="member-institution">HIT, China</div>
+            </div>
         </div>
+    </div>
 
-        <div class="card">
-            <div class="card-title">Finance Chair</div>
-            <ul class="committee-list">
-                <li>Prof. Sandipan Pine</li>
-                <li>Prof. K.C. Sethi</li>
-            </ul>
+    <div class="committee-section">
+        <h2 class="section-title">PROGRAM CHAIR</h2>
+        <div class="committee-container">
+            <div class="member">
+                <div class="member-title">Dr. Prafulla Panda</div>
+                <div class="member-institution">Dean, SoET, CUTM</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Dr. DK Sahoo</div>
+                <div class="member-institution">Assoc. Prof, ECE, CUTM</div>
+            </div>
         </div>
+    </div>
 
-        <div class="card">
-            <div class="card-title">Track Chair</div>
-            <ul class="committee-list">
-                <li>Dr. Ramesh Mohanty</li>
-                <li>Dr. S.K. Biswal</li>
-            </ul>
+    <div class="committee-section">
+        <h2 class="section-title">CONVENOR</h2>
+        <div class="committee-container">
+            <div class="member">
+                <div class="member-title">Prof. Dr. Ashok Mishra</div>
+            </div>
         </div>
+    </div>
 
-        <div class="card">
-            <div class="card-title">Convenor</div>
-            <ul class="committee-list">
-                <li>Prof. Dr. Ashok Mishra</li>
-            </ul>
+    <div class="committee-section">
+        <h2 class="section-title">CO-CONVENOR</h2>
+        <div class="committee-container">
+            <div class="member">
+                <div class="member-title">Prof. Dr. Mihir N Mohant</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. Pravat Pattnaik</div>
+            </div>
         </div>
+    </div>
 
-        <div class="card">
-            <div class="card-title">Co-Convenor</div>
-            <ul class="committee-list">
-                <li>Prof. Dr. Mihir N Mohanty</li>
-                <li>Prof. Prabhat Pattnaik</li>
-            </ul>
+    <div class="committee-section">
+        <h2 class="section-title">PUBLICATION COMMITTEE</h2>
+        <div class="committee-container">
+            <div class="member">
+                <div class="member-title">Dr. P.K Sahoo</div>
+                <div class="member-institution">IIIB</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Dr. Ramesh Ch. Mohanty</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Dr. Abishek Das</div>
+                <div class="member-institution">Chair</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Dr. Satya N Dhal</div>
+                <div class="member-institution">Physics</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Dr. Abinash Ratha</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Dr. Prajna P. Pradhan</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Dr. Satyajit Mishra</div>
+                <div class="member-institution">Mechanical</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Dr. Sagar Maitra</div>
+                <div class="member-institution">Agriculture</div>
+            </div>
         </div>
+    </div>
 
-        <div class="card">
-            <div class="card-title">Registration Committee</div>
-            <ul class="committee-list">
-                <li>Prof. G.K. Sahu</li>
-                <li>Prof. Jeevarathnam</li>
-                <li>Prof. Subhashree Pritichanda</li>
-                <li>Prof. Rajesh Majhi</li>
-            </ul>
+    <div class="committee-section">
+        <h2 class="section-title">FINANCE CHAIR</h2>
+        <div class="committee-container">
+            <div class="member">
+                <div class="member-title">Prof. Sandipan Pine</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. K.C Sethi</div>
+            </div>
         </div>
+    </div>
 
-        <div class="card tall-card">
-            <div class="card-title">Publication Committee</div>
-            <ul class="committee-list">
-                <li>Dr. P.K. Sahoo, IIIB</li>
-                <li>Dr. Ramesh Ch. Mohanty</li>
-                <li>Dr. Abishek Das (Chair)</li>
-                <li>Dr. Satya N. Dhal (Phy)</li>
-                <li>Dr. Abinash Ratha</li>
-                <li>Dr. Prajna P. Pradhan</li>
-                <li>Dr. Satyajit Mishra (Mech)</li>
-                <li>Dr. Sagar Maitra (Ag)</li>
-            </ul>
+    <div class="committee-section">
+        <h2 class="section-title">TRACK CHAIR</h2>
+        <div class="committee-container">
+            <div class="member">
+                <div class="member-title">Dr. Ramesh Mohanty</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Dr. S.K Biswal</div>
+            </div>
         </div>
+    </div>
 
-        <div class="card tall-card">
-            <div class="card-title">Organising Committee</div>
-            <ul class="committee-list">
-                <li>Prof. Prafulla Panda</li>
-                <li>Prof. Durga Padhi</li>
-                <li>Prof. S.P. Nanda</li>
-                <li>Prof. Prajna Pani</li>
-                <li>Prof. Debendra Reddy</li>
-                <li>Prof. Ashok Mishra</li>
-                <li>Prof. DK Sahoo</li>
-                <li>Prof. Sagar Maitra</li>
-                <li>Prof. Prabhat Patnaik</li>
-            </ul>
+    <div class="committee-section">
+        <h2 class="section-title">ORGANISING COMMITTEE</h2>
+        <div class="committee-container">
+            <div class="member">
+                <div class="member-title">Prof. Prafulla Panda</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. Durga Padhi</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. S.P Nanda</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. Prajna Pani</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. Debendra Reddy</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. Ashok Mishra</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. DK Sahoo</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. Sagar Maitra</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. Prabhat Pattnaik</div>
+            </div>
         </div>
+    </div>
 
-        <div class="card tall-card">
-            <div class="card-title">Local Organising Committee</div>
-            <ul class="committee-list">
-                <li>Prof. Durga Padhi</li>
-                <li>Prof. Satyanarayana Padhi</li>
-                <li>Prof. Girish Rath</li>
-                <li>Prof. Susanta Pattnaik</li>
-                <li>Prof. Jagannath Padhi</li>
-                <li>Prof. Kalayan Chakravarthy</li>
-                <li>Prof. Sushant Pattnaik</li>
-            </ul>
+    <div class="committee-section">
+        <h2 class="section-title">REGISTRATION COMMITTEE</h2>
+        <div class="committee-container">
+            <div class="member">
+                <div class="member-title">Prof. G.K Sahu</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. Jeevarathnam</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. Subhashree Prtichhanda</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. Rajesh Majhi</div>
+            </div>
         </div>
-        <hr>
-      
+    </div>
+
+    <div class="committee-section">
+        <h2 class="section-title">LOCAL ORGANISING COMMITTEE</h2>
+        <div class="committee-container">
+            <div class="member">
+                <div class="member-title">Prof. Durga Padhi</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. Satyanarayana Padhi</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. Girish Rath</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. Susanta Pattnaik</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. Jagannath Pandhi</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. Kalyan Chakravarthy</div>
+            </div>
+            <div class="member">
+                <div class="member-title">Prof. Sushant Pattnaik</div>
+            </div>
+        </div>
     </div>
 
 <hr>
