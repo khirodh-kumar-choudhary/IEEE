@@ -4,303 +4,385 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Committee Members</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #d2e0ec;
-            /* Smoke white background color */
+            background-color: #dae0e6;
             margin: 0;
             padding: 20px;
         }
 
         h1 {
             text-align: center;
-            /* Center the title */
             margin-bottom: 20px;
         }
 
-        .accordion {
-            margin: 0 auto;
-            max-width: 800px;
-            width: 100%;
-        }
-
-        .accordion-section {
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .accordion-header {
-            background-color: #224e7d;
-            /* color */
-            color: #fff;
-            padding: 15px;
+        .card-container {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-radius: 5px 5px 0 0;
-            transition: background-color 0.3s;
-            cursor: default;
-            /* Default cursor for committee headers */
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
 
-        .accordion-header:hover {
-            background-color: #546d7e;
-            /* on hover */
-        }
-
-        .accordion-content {
-            display: none;
+        .card {
+            flex: 1 1 300px; /* Make the cards responsive */
+            max-width: 300px; /* Ensure max width for the cards */
             padding: 15px;
-            border-top: 1px solid #ccc;
+            background-color: #336a75; /* Light color for the card background */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            color: black;
+            transition: background-color 0.3s, transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
-        .accordion-content ul {
-            margin: 10px 0;
-            padding-left: 20px;
-            /* Adjust left padding for bullets */
+        .card:hover {
+            background-color: #92adb3;
+            transform: translateY(-5px);
         }
 
-        .accordion-content ul li {
-            margin: 5px 0;
-            /* Add margin between list items */
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
 
-        button {
-            background-color: #fff;
-            color: #224e7d;
-            border: 1px solid #224e7d;
+        .committee-list {
+            list-style-type: disc;
+            padding: 10px;
+            background-color: #fff; /* Set background color to white */
+            color: black;
             border-radius: 5px;
-            padding: 5px 10px;
-            cursor: pointer;
-            /* Pointer cursor for buttons */
-            transition: background-color 0.3s, color 0.3s;
+            text-align: left;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow-y: auto;   
+            list-style-type: circle; /* bullet points */
+            padding-left: 20px;
         }
 
-        button:hover {
-            background-color: #224e7d;
-            color: #fff;
+        .committee-list li {
+            margin-bottom: 10px;
         }
 
-        @media (max-width: 600px) {
-            .accordion-header {
-                flex-direction: column;
-                align-items: flex-start;
+        .tall-card {
+            flex: 1 1 300px;
+            max-width: 300px;
+            height: 390px; /* Card size */
+        }
+
+        @media (max-width: 768px) {
+            .card, .tall-card {
+                max-width: 100%; /* Full width on smaller screens */
+            }
+        }
+
+
+
+        .mobile-toggler .fa-bars,
+        .mobile-toggler .fa-x {
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            .mobile-toggler .fa-bars {
+                display: block;
             }
 
-            button {
-                margin-top: 10px;
-                align-self: flex-end;
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu.open {
+                transform: translateX(0);
+            }
+
+            .mobile-menu {
+                transition: transform 0.3s ease-in-out;
+                transform: translateX(-100%);
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                background-color: white;
+                z-index: 1000;
+            }
+
+            .mobile-menu.hidden {
+                transform: translateX(100%);
             }
         }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 20px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .dropdown .dropbtn .caret {
+            margin-left: 8px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
     </style>
 </head>
 
 <body>
-    <h1>Committee Members</h1>
-    <div class="accordion">
-        <div class="accordion-section">
-            <div class="accordion-header">
-                Chief Patron
-                <button onclick="toggleAccordion(this)">Click Here</button>
+    <br><br><br>
+    <marquee behavior="fast-changing" direction="latest" class="text-4xl text-red-700"><b>NOTE : This website is currently in the process of adding data. </b></marquee>
+  
+    <nav class="z-50 bg-white shadow-lg fixed top-0 w-full">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <div class="nav-links hidden md:flex justify-center items-center">
+                <ul class="flex space-x-10">
+                    <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="index.html">Home</a></li>
+                    <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="committee.html">Committee</a></li>
+                    <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="sponsors.html">Sponsors</a></li>
+                    <li class="relative group">
+                        <div class="dropdown">
+                            <a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="#">Author Guidelines <span class="caret"></span></a>
+                            <div class="dropdown-content hidden group-hover:block absolute bg-white shadow-lg mt-1">
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="CallforPapers.html">Call For Papers</a>
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Important Dates.html">Important Dates</a>
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="PaperSubmission.html">Paper-Submission</a>
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="ProgramSchedule.html">Program Shedule</a>
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Accomadation.html">Accomodation</a>
+                              
+                            </div>
+                        </div>
+                    </li>
+                    <li class="relative group">
+                        <a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="registation.html">Registration</a>
+                    </li>
+                    <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="contacts.html">Contact</a></li>
+                </ul>
             </div>
-            <div class="accordion-content">
-                <ul>
-                    <li>President of CUTM: Prof. Dr. Muktikanta Mishra </li>
-                    <li>Vice-President of CUTM: Prof. Dr. D.N Rao</li>
+            <div class="mobile-toggler md:hidden">
+                <div class="space-y-2" id="menu-toggle">
+                    <div class="w-8 h-1 bg-gray-700 transition transform duration-300"></div>
+                    <div class="w-8 h-1 bg-gray-700 transition transform duration-300"></div>
+                    <div class="w-8 h-1 bg-gray-700 transition transform duration-300"></div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu fixed inset-0 bg-black bg-opacity-50 w-full h-full hidden transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
+            <div class="bg-white w-2/4 h-full p-6">
+                <div class="flex justify-end">
+                    <div id="menu-close" class="cursor-pointer">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </div>
+                </div>
+                <ul class="space-y-6 flex flex-col mt-10">
+                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="index.html">Home</a></li>
+                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="committee.html">Committee</a></li>
+                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="sponsors.html">Sponsors</a></li>
+                    <li class="relative group">
+                        <a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300" href="#">Author Guidelines </a>
+                        <div class="dropdown-content hidden group-hover:block absolute bg-white shadow-lg mt-1">
+                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="CallforPapers.html">Call For Papers</a>
+                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Important Dates.html">Important Dates</a>
+                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="PaperSubmission.html">Paper-Submission</a>
+                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="ProgramSchedule.html">Program Shedule</a>
+                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Accomadation.html">Accomodation</a>
+                          
+                        </div>
+                    </li>
+                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="registration.html">Registration</a></li>
+                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="contacts.html">Contact</a></li>
                 </ul>
             </div>
         </div>
+    </nav>
+   
+    <br><br><br><br>
 
-        <!-- Add more sections for other roles and committees -->
-
-        <div class="accordion-section">
-            <div class="accordion-header">
-                General Chair
-                <button onclick="toggleAccordion(this)">Click Here</button>
-            </div>
-            <div class="accordion-content">
-                <ul>
-                    <li>VC of CUTM: Prof. Dr. Supriya Pattnayak</li>
-                    <li>Registrar of CUTM: Prof. Dr. Anita Patra</li>
-                    <li>IIIB: Prof. Dr. Subranshu Samantaray</li>
-                </ul>
-            </div>
+    <h1 class="text-4xl text-gray-900">Committee Members</h1>
+    <br><br><br>
+    <div class="card-container">
+        <div class="card">
+            <div class="card-title">Chief Patron</div>
+            <ul class="committee-list">
+                <li>President of CUTM: Prof. Dr. Muktikanta Mishra</li>
+                <li>Vice-President of CUTM: Prof. Dr. D.N Rao</li>
+            </ul>
         </div>
 
-        <div class="accordion-section">
-            <div class="accordion-header">
-                Honourary Chair
-                <button onclick="toggleAccordion(this)">Click Here</button>
-            </div>
-            <div class="accordion-content">
-                <ul>
-                    <li>Ex-Deputy Director IIIB: Prof. Dr. Ganapati Panda</li>
-                    <li> PCIL,Govt. of India: Prof. A.K Tripathy</li>
-                    <li>Prof. Dr. Okyay Kaynak, Istnabul, Turkey</li>
-                    <li>Huijen Gao, HIT, China</li>
-                </ul>
-            </div>
+        <div class="card">
+            <div class="card-title">General Chair</div>
+            <ul class="committee-list">
+                <li>VC of CUTM: Prof. Dr. Supriya Pattnayak</li>
+                <li>Registrar of CUTM: Prof. Dr. Anita Patra</li>
+                <li>IIIB: Prof. Dr. Subranshu Samantaray</li>
+            </ul>
         </div>
 
-
-        <div class="accordion-section">
-            <div class="accordion-header">
-                Program Chair
-                <button onclick="toggleAccordion(this)">Click Here</button>
-            </div>
-            <div class="accordion-content">
-                <ul>
-                    <li>Dr. Prafulla Panda,Dean,SoET,CUTM</li>
-                    <li>Dr. DK Sahoo, ASSOC.Prof,ECE,CUTM</li>
-                </ul>
-            </div>
+        <div class="card">
+            <div class="card-title">Honourary Chair</div>
+            <ul class="committee-list">
+                <li>Ex-Deputy Director IIIB: Prof. Dr. Ganapati Panda</li>
+                <li>PCIL, Govt. of India: Prof. A.K Tripathy</li>
+                <li>Prof. Dr. Okyay Kaynak, Istanbul, Turkey</li>
+                <li>Huijen Gao, HIT, China</li>
+            </ul>
         </div>
 
-        <div class="accordion-section">
-            <div class="accordion-header">
-                Finance Chair
-                <button onclick="toggleAccordion(this)">Click Here</button>
-            </div>
-            <div class="accordion-content">
-                <ul>
-                    <li>prof.Sandipan Pine</li>
-                    <li>Prof.K.C.Sethi</li>
-                </ul>
-            </div>
+        <div class="card">
+            <div class="card-title">Program Chair</div>
+            <ul class="committee-list">
+                <li>Dr. Prafulla Panda, Dean, SoET, CUTM</li>
+                <li>Dr. DK Sahoo, Assoc. Prof, ECE, CUTM</li>
+            </ul>
         </div>
 
-        <div class="accordion-section">
-            <div class="accordion-header">
-                Track Chair
-                <button onclick="toggleAccordion(this)">Click Here</button>
-            </div>
-            <div class="accordion-content">
-                <ul>
-                    <li>Dr.Ramesh Mohanty</li>
-                    <li>Dr.S.K Biswal</li>
-                </ul>
-            </div>
+        <div class="card">
+            <div class="card-title">Finance Chair</div>
+            <ul class="committee-list">
+                <li>Prof. Sandipan Pine</li>
+                <li>Prof. K.C. Sethi</li>
+            </ul>
         </div>
 
-
-        <div class="accordion-section">
-            <div class="accordion-header">
-                Convenor
-                <button onclick="toggleAccordion(this)">Click Here</button>
-            </div>
-            <div class="accordion-content">
-                <ul>
-                    <li>Prof. Dr. Ashok Mishra</li>
-                </ul>
-            </div>
-        </div>
-        <!-- Add more sections for other roles and committees -->
-
-        <div class="accordion-section">
-            <div class="accordion-header">
-                Co-Convenor
-                <button onclick="toggleAccordion(this)">Click Here</button>
-            </div>
-            <div class="accordion-content">
-                <ul>
-                    <li>prof.Dr.Mihir N Mohanty</li>
-                    <li>Prof.Pravat Pattnaik</li>
-                </ul>
-            </div>
+        <div class="card">
+            <div class="card-title">Track Chair</div>
+            <ul class="committee-list">
+                <li>Dr. Ramesh Mohanty</li>
+                <li>Dr. S.K. Biswal</li>
+            </ul>
         </div>
 
-
-        <!-- Add more sections for other roles and committees -->
-        <div class="accordion-section">
-            <div class="accordion-header">
-                Publication Committee
-                <button onclick="toggleAccordion(this)">Click Here</button>
-            </div>
-            <div class="accordion-content">
-                <ul>
-                    <li>Dr. P.K Sahoo, IIIB</li>
-                    <li>Dr. Ramesh Ch, Mohanty</li>
-                    <li>Dr. Abishek Das (Chair)</li>
-                    <li>Dr. Satya N Dhal (Phy)</li>
-                    <li>Dr. Abinash Ratha</li>
-                    <li>Dr. Prajna P.Pradhan</li>
-                    <li>Dr. Satyajit Mishra (Mech)</li>
-                    <li>Dr. Sagar Maitra (Ag)</li>
-                </ul>
-            </div>
+        <div class="card">
+            <div class="card-title">Convenor</div>
+            <ul class="committee-list">
+                <li>Prof. Dr. Ashok Mishra</li>
+            </ul>
         </div>
 
-        <div class="accordion-section">
-            <div class="accordion-header">
-                Organising Committee
-                <button onclick="toggleAccordion(this)">Click Here</button>
-            </div>
-            <div class="accordion-content">
-                <ul>
-                    <li>Prof.Prafulla Panda</li>
-                    <li>Prof.Durga Pandhi</li>
-                    <li>Prof.S.P Nanda</li>
-                    <li>Prof.Prajna Pani</li>
-                    <li>Prof.Debendra Reddy</li>
-                    <li>Prof.Ashok Mishra</li>
-                    <li>Prof.DK Shaoo</li>
-                    <li>Prof.Sagar Maitra</li>
-                    <li>Prof.Pravat Pattnaik</li>
-                </ul>
-            </div>
+        <div class="card">
+            <div class="card-title">Co-Convenor</div>
+            <ul class="committee-list">
+                <li>Prof. Dr. Mihir N Mohanty</li>
+                <li>Prof. Prabhat Pattnaik</li>
+            </ul>
         </div>
 
-        <div class="accordion-section">
-            <div class="accordion-header">
-                Registration Committee
-                <button onclick="toggleAccordion(this)">Click Here</button>
-            </div>
-            <div class="accordion-content">
-                <ul>
-                    <li>Prof.G.K Sahu</li>
-                    <li>Prof.Jeevarathnam</li>
-                    <li>Prof.Subhashree Prtichhanda</li>
-                    <li>Prof.Rajesh Majhi</li>
-                </ul>
-            </div>
+        <div class="card">
+            <div class="card-title">Registration Committee</div>
+            <ul class="committee-list">
+                <li>Prof. G.K. Sahu</li>
+                <li>Prof. Jeevarathnam</li>
+                <li>Prof. Subhashree Pritichanda</li>
+                <li>Prof. Rajesh Majhi</li>
+            </ul>
         </div>
 
-        <div class="accordion-section">
-            <div class="accordion-header">
-                Local Organising Committee
-                <button onclick="toggleAccordion(this)">Click Here</button>
-            </div>
-            <div class="accordion-content">
-                <ul>
-                    <li>Prof.Durga Padhi</li>
-                    <li>Prof.Satyanarayana Padhi</li>
-                    <li>Prof.Girish Rath</li>
-                    <li>Prof.Susanta pattnaik</li>
-                    <li>Prof.Jagannath Pandhi</li>
-                    <li>Prof.kalayan Chakravathy</li>
-                    <li>Prof.Sushant Pattnaik</li>
-                </ul>
-            </div>
+        <div class="card tall-card">
+            <div class="card-title">Publication Committee</div>
+            <ul class="committee-list">
+                <li>Dr. P.K. Sahoo, IIIB</li>
+                <li>Dr. Ramesh Ch. Mohanty</li>
+                <li>Dr. Abishek Das (Chair)</li>
+                <li>Dr. Satya N. Dhal (Phy)</li>
+                <li>Dr. Abinash Ratha</li>
+                <li>Dr. Prajna P. Pradhan</li>
+                <li>Dr. Satyajit Mishra (Mech)</li>
+                <li>Dr. Sagar Maitra (Ag)</li>
+            </ul>
         </div>
 
+        <div class="card tall-card">
+            <div class="card-title">Organising Committee</div>
+            <ul class="committee-list">
+                <li>Prof. Prafulla Panda</li>
+                <li>Prof. Durga Padhi</li>
+                <li>Prof. S.P. Nanda</li>
+                <li>Prof. Prajna Pani</li>
+                <li>Prof. Debendra Reddy</li>
+                <li>Prof. Ashok Mishra</li>
+                <li>Prof. DK Sahoo</li>
+                <li>Prof. Sagar Maitra</li>
+                <li>Prof. Prabhat Patnaik</li>
+            </ul>
+        </div>
 
+        <div class="card tall-card">
+            <div class="card-title">Local Organising Committee</div>
+            <ul class="committee-list">
+                <li>Prof. Durga Padhi</li>
+                <li>Prof. Satyanarayana Padhi</li>
+                <li>Prof. Girish Rath</li>
+                <li>Prof. Susanta Pattnaik</li>
+                <li>Prof. Jagannath Padhi</li>
+                <li>Prof. Kalayan Chakravarthy</li>
+                <li>Prof. Sushant Pattnaik</li>
+            </ul>
+        </div>
+        <hr>
+      
     </div>
 
+<hr>
+    <div id="footer-placeholder"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        function toggleAccordion(button) {
-            const content = button.parentElement.nextElementSibling;
-            const isActive = content.style.display === "block";
-            document.querySelectorAll('.accordion-content').forEach(section => {
-                section.style.display = "none";
-            });
-            content.style.display = isActive ? "none" : "block";
-        }
+        $(document).ready(function () {
+            $("#header-placeholder").load("header.html");
+            $("#footer-placeholder").load("footer.html");
+        });
     </script>
 </body>
 

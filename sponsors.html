@@ -1,119 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header</title>
+    <title>IEEE Sponsors</title>
+    <link rel="stylesheet" href="regstyles.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <style>
-        .mobile-toggler .fa-bars,
-        .mobile-toggler .fa-x {
-            display: none;
-        }
-
-        @media (max-width: 767px) {
-            .mobile-toggler .fa-bars {
-                display: block;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu.open {
-                transform: translateX(0);
-            }
-
-            .mobile-menu {
-                transition: transform 0.3s ease-in-out;
-                transform: translateX(-100%);
-                position: fixed;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                background-color: white;
-                z-index: 1000;
-            }
-
-            .mobile-menu.hidden {
-                transform: translateX(100%);
-            }
-        }
-
-        .dropdown {
-            float: left;
-            overflow: hidden;
-        }
-
-        .dropdown .dropbtn {
-            font-size: 16px;
-            border: none;
-            outline: none;
-            color: white;
-            padding: 14px 20px;
-            background-color: inherit;
-            font-family: inherit;
-            margin: 0;
-            display: flex;
-            align-items: center;
-        }
-
-        .dropdown .dropbtn .caret {
-            margin-left: 8px;
-            border: solid white;
-            border-width: 0 3px 3px 0;
-            display: inline-block;
-            padding: 3px;
-            transform: rotate(45deg);
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            float: none;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .font-bold {
-  font-weight: 10000; 
-}
-    </style>
-
+    <link rel="stylesheet" href="sponserstyles.css">
 </head>
-
-<body class="bg-gray-100">
-
-    <!-- Navigation Bar -->
+<body>
+  
     <nav class="z-50 bg-white shadow-lg fixed top-0 w-full">
         <div class="container mx-auto flex justify-between items-center p-4">
             <div class="nav-links hidden md:flex justify-center items-center">
                 <ul class="flex space-x-10">
-                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="index.html">Home</a></li>
-
+                    <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="index.html">Home</a></li>
                     <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="committee.html">Committee</a></li>
                     <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="sponsors.html">Sponsors</a></li>
                     <li class="relative group">
@@ -123,9 +27,8 @@
                                 <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="CallforPapers.html">Call For Papers</a>
                                 <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Important Dates.html">Important Dates</a>
                                 <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="PaperSubmission.html">Paper-Submission</a>
-                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="ProgramSchedule.html">Program Shedule</a>
-                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Accomadation.html">Accomodation</a>
-                              
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Accomadation.html">Accommodation</a>
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="ProgramSchedule.html">Program Schedule</a>
                             </div>
                         </div>
                     </li>
@@ -153,7 +56,7 @@
                     </div>
                 </div>
                 <ul class="space-y-6 flex flex-col mt-10">
-                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="index.html">Home</a></li>
+                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="index.html">Home</a></li>
                     <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="committee.html">Committee</a></li>
                     <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="sponsors.html">Sponsors</a></li>
                     <li class="relative group">
@@ -162,9 +65,8 @@
                             <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="CallforPapers.html">Call For Papers</a>
                             <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Important Dates.html">Important Dates</a>
                             <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="PaperSubmission.html">Paper-Submission</a>
-                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="ProgramSchedule.html">Program Shedule</a>
-                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Accomadation.html">Accomodation</a>
-                          
+                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Accomadation.html">Accommodation</a>
+                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="ProgramSchedule.html">Program Schedule</a>
                         </div>
                     </li>
                     <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="registration.html">Registration</a></li>
@@ -173,10 +75,60 @@
             </div>
         </div>
     </nav>
+ <br><br><br>
+    <header>
+        <h1>Our Sponsors</h1>
+    </header>
+    <main>
 
+        <br><br><br>
+        <marquee behavior="fast-changing" direction="latest" class="text-4xl text-red-700"><b>NOTE : This website is currently in the process of adding data. </b></marquee>
+
+
+        <section class="sponsor" id="sponsor1">
+            <img src="assets/ieee.png" alt="Sponsor 1 Logo">
+            <h3>Description</h3>
+            <p> IEEE has sponsored various programs<br>to honor achievements in education, industry, research, and service, celebrating distinguished colleagues, teachers, and corporate leaders who<br>have made a lasting impact on humanity, technology, and the profession.</p>
+            <a href="https://www.sponsor1.com" target="_blank">Visit Website</a>
+        </section>
+        <section class="sponsor" id="sponsor2">
+            <!-- <img src="assets/google.png" alt="Sponsor 2 Logo"> -->
+
+
+            <h1 class="font-bold text-3xl"> More Sponsers</h1>
+            <br>
+            <!-- <h3>Description</h3>
+            <p>Google LLC is an American multinational corporation and technology company focusing on online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, consumer electronics,and artificial intelligence.</p> -->
+            <!-- <a href="https://www.sponsor2.com" target="_blank">Visit Website</a> -->
+        </section>
+        <!-- <section class="sponsor" id="sponsor3">
+          <img src="assets/images.png" alt="Sponsor 2 Logo">
+          <h3>Description</h3>
+          <p>Amazon.com, Inc., doing business as Amazon, is an American multinational technology company, engaged in e-commerce, cloud computing, online advertising, digital streaming,software engineering,search engine technology and artificial intelligence.</p>
+          <a href="https://www.sponsor2.com" target="_blank">Visit Website</a>
+      </section> -->
+        
+    </main>
+    <section>
+        <div id="footer-placeholder"></div>
+
+    </section>
+
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="conn.js"></script>
+
+    <script>
+        // Load header and footer
+        $(document).ready(function () {
+            $("#header-placeholder").load("header.html");
+            $("#footer-placeholder").load("footer.html");
+        });
+
+    </script>
+
 </body>
 
 </html>

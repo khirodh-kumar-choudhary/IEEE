@@ -1,16 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    <title>Accommodation Details</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        #showcase {
+            background: rgb(241, 238, 238);
+            color: #fff;
+            min-height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #showcase img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .details {
+            background: #fff;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        .details h2 {
+            color: #1c7eef;
+        }
+        .details ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            text-align: left;
+        }
+        .details ul li {
+            margin: 10px 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            #showcase {
+                min-height: 200px;
+            }
+            .details {
+                padding: 10px;
+            }
+            .details ul {
+                padding-left: 15px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+            }
+            #showcase {
+                min-height: 150px;
+            }
+            .details ul {
+                padding-left: 10px;
+            }
+        }
+
+
+
+        
         .mobile-toggler .fa-bars,
         .mobile-toggler .fa-x {
             display: none;
@@ -97,41 +165,34 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
-        .font-bold {
-  font-weight: 10000; 
+.bold{
+    font-weight: 800;
 }
+
+        
     </style>
-
 </head>
+<body>
 
-<body class="bg-gray-100">
-
-    <!-- Navigation Bar -->
     <nav class="z-50 bg-white shadow-lg fixed top-0 w-full">
         <div class="container mx-auto flex justify-between items-center p-4">
             <div class="nav-links hidden md:flex justify-center items-center">
                 <ul class="flex space-x-10">
-                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="index.html">Home</a></li>
-
+                    <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="index.html">Home</a></li>
                     <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="committee.html">Committee</a></li>
                     <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="sponsors.html">Sponsors</a></li>
-                    <li class="relative group">
-                        <div class="dropdown">
-                            <a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="#">Author Guidelines <span class="caret"></span></a>
-                            <div class="dropdown-content hidden group-hover:block absolute bg-white shadow-lg mt-1">
-                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="CallforPapers.html">Call For Papers</a>
-                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Important Dates.html">Important Dates</a>
-                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="PaperSubmission.html">Paper-Submission</a>
-                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="ProgramSchedule.html">Program Shedule</a>
-                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Accomadation.html">Accomodation</a>
-                              
-                            </div>
+                    <li class="dropdown">
+                        <button class=" text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold">Author Guidelines <span class="caret"></span></button>
+                        <div class="dropdown-content">
+                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="CallforPapers.html">Call For Papers</a>
+                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Important Dates.html">Important Dates</a>
+                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="PaperSubmission.html">Paper-Submission</a>
+                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="ProgramSchedule.html">Program Shedule</a>
+                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Accomadation.html">Accomodation</a>
+                          
                         </div>
                     </li>
-                    <li class="relative group">
-                        <a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="registation.html">Registration</a>
-                    </li>
+                    <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="registration.html">Registration</a></li>
                     <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="contacts.html">Contact</a></li>
                 </ul>
             </div>
@@ -153,11 +214,11 @@
                     </div>
                 </div>
                 <ul class="space-y-6 flex flex-col mt-10">
-                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="index.html">Home</a></li>
+                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="index.html">Home</a></li>
                     <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="committee.html">Committee</a></li>
                     <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="sponsors.html">Sponsors</a></li>
                     <li class="relative group">
-                        <a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300" href="#">Author Guidelines </a>
+                        <a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="#">Author Guidelines</a>
                         <div class="dropdown-content hidden group-hover:block absolute bg-white shadow-lg mt-1">
                             <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="CallforPapers.html">Call For Papers</a>
                             <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Important Dates.html">Important Dates</a>
@@ -174,9 +235,33 @@
         </div>
     </nav>
 
+<br><br>
+    <header id="showcase">
+        <img src="assets/CUTM__.jpg"  alt="Accommodation Building">
+    </header>
+    <div class="container">
+        <div class="details">
+            <h2 class="text-4xl text-center">Accommodation Details</h2>
+            <br>
+            <ul>
+                <li>Accommodation facilities will be provided at CUTM Parlakhemundi Campus.</li>
+                <li>Accommodation charges will be announced soon.</li>
+                <li>Accommodation will be allocated strictly on a first come, first served basis.</li>
+                <li>Contact information for accommodation inquiries will be updated shortly.</li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div id="footer-placeholder"></div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        $(document).ready(function () {
+            $("#header-placeholder").load("header.html");
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
 </body>
 
 </html>
+

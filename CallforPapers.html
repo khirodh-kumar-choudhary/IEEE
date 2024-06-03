@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call for Papers - IEEE SCOPES 2024</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #77adba;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77adba 3px solid;
+        }
+
+        header h1 {
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .main {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        section h2, section h3 {
+            color: #333;
+            border-bottom: 2px solid #77adba;
+            padding-bottom: 10px;
+        }
+
+        section p {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        a {
+            color: #92adb3;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #92adb3;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            header h1 {
+                font-size: 20px;
+            }
+
+            table, th, td {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 18px;
+            }
+
+            section h2, section h3 {
+                font-size: 16px;
+            }
+
+            table, th, td {
+                font-size: 12px;
+                padding: 6px;
+            }
+
+            table thead {
+                display: none;
+            }
+
+            table tbody tr {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            table tbody tr td {
+                display: block;
+                text-align: right;
+                position: relative;
+                padding-left: 50%;
+            }
+
+            table tbody tr td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 10px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+
+        .mobile-toggler .fa-bars,
+        .mobile-toggler .fa-x {
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            .mobile-toggler .fa-bars {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu.open {
+                transform: translateX(0);
+            }
+
+            .mobile-menu {
+                transition: transform 0.3s ease-in-out;
+                transform: translateX(-100%);
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                background-color: white;
+                z-index: 1000;
+            }
+
+            .mobile-menu.hidden {
+                transform: translateX(100%);
+            }
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 20px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .dropdown .dropbtn .caret {
+            margin-left: 8px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+<br><br><br><br>
+
+<nav class="z-50 bg-white shadow-lg fixed top-0 w-full">
+    <div class="container mx-auto flex justify-between items-center p-4">
+        <div class="nav-links hidden md:flex justify-center items-center">
+            <ul class="flex space-x-10">
+                <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300" href="index.html">Home</a></li>
+                <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300" href="committee.html">Committee</a></li>
+                <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300" href="sponsors.html">Sponsors</a></li>
+                <li class="dropdown">
+                    <button class=" text-2xl text-gray-700 hover:text-gray-900 transition duration-300">Author Guidelines <span class="caret"></span></button>
+                    <div class="dropdown-content">
+                        <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="CallforPapers.html">Call For Papers</a>
+                        <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Important Dates.html">Important Dates</a>
+                        <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="PaperSubmission.html">Paper-Submission</a>
+                        <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="ProgramSchedule.html">Program Shedule</a>
+                        <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Accomadation.html">Accomodation</a>
+                      
+                    </div>
+                </li>
+                <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300" href="registation.html">Registration</a></li>
+                <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300" href="contacts.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="mobile-toggler md:hidden">
+            <div class="space-y-2" id="menu-toggle">
+                <div class="w-8 h-1 bg-gray-700 transition transform duration-300"></div>
+                <div class="w-8 h-1 bg-gray-700 transition transform duration-300"></div>
+                <div class="w-8 h-1 bg-gray-700 transition transform duration-300"></div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-menu fixed inset-0 bg-black bg-opacity-50 w-full h-full hidden transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
+        <div class="bg-white w-2/4 h-full p-6">
+            <div class="flex justify-end">
+                <div id="menu-close" class="cursor-pointer">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </div>
+            </div>
+            <ul class="space-y-6 flex flex-col mt-10">
+                <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="index.html">Home</a></li>
+                <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="committee.html">Committee</a></li>
+                <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="sponsors.html">Sponsors</a></li>
+                <li class="relative group">
+                    <a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="#">Author Guidelines</a>
+                    <div class="dropdown-content hidden group-hover:block absolute bg-white shadow-lg mt-1">
+                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="CallforPapers.html">Call For Papers</a>
+                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Important Dates.html">Important Dates</a>
+                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="PaperSubmission.html">Paper-Submission</a>
+                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="ProgramSchedule.html">Program Shedule</a>
+                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Accomadation.html">Accomodation</a>
+                          
+                    </div>
+                </li>
+                <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="registration.html">Registration</a></li>
+                <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="contacts.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <div class="container">
+        <h1>Call for Papers - IEEE SCOPES 2024</h1>
+    </div>
+</header>
+<div class="container main">
+    <section>
+        <p>The conference, organized by Centurion University of Technology and Management (CUTM), is a premier event focusing on the latest advancements and research in the fields of Signal Processing, Communication, Power, and Embedded Systems. Previously held at prestigious locations including IIT Delhi, IIT Kanpur, IISc Bengaluru, and others, this conference aims to bring together researchers, academicians, and industry experts to share knowledge, discuss new challenges, and explore innovative solutions in these areas. The conference provides a unique platform for networking, collaboration, and dissemination of cutting-edge research in these fields.</p>
+    </section>
+    <section>
+        <h3>The conference themes, grouped in four tracks, are the following (but are not limited to)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Signal Processing</th>
+                    <th>Communication</th>
+                    <th>Power</th>
+                    <th>Embedded Systems</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Signal Processing">Image Processing</td>
+                    <td data-label="Communication">Professional Communication</td>
+                    <td data-label="Power">Power Systems</td>
+                    <td data-label="Embedded Systems">Microcontrollers</td>
+                </tr>
+                <tr>
+                    <td data-label="Signal Processing">Deep Learning</td>
+                    <td data-label="Communication">Wireless Communication Topics</td>
+                    <td data-label="Power">Renewable Energy</td>
+                    <td data-label="Embedded Systems">IoT Systems</td>
+                </tr>
+                <tr>
+                    <td data-label="Signal Processing">Machine Learning</td>
+                    <td data-label="Communication">Optical Communication</td>
+                    <td data-label="Power">Smart Grids</td>
+                    <td data-label="Embedded Systems">Embedded AI</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#header-placeholder").load("header.html");
+        $("#footer-placeholder").load("footer.html");
+
+        $('#menu-toggle').click(function () {
+            $('.mobile-menu').toggleClass('hidden');
+            $('.mobile-menu').toggleClass('-translate-x-full');
+        });
+
+        $('#menu-close').click(function () {
+            $('.mobile-menu').addClass('hidden');
+            $('.mobile-menu').removeClass('-translate-x-full');
+        });
+    });
+</script>
+</body>
+</html>

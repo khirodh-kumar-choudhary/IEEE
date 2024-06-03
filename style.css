@@ -9,11 +9,25 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.iee-logo img {
+    height: 170px;
+    width: 170px;
+   
+    object-fit: cover; 
+}
+
+.cutm-logo img{
+    height: 190px;
+    width: 130px;
+   
+   
+}
 .slider img,
 .about-image img,
 .speakers-slides img,
 .sponsor-logos img {
     width: 100%;
+    display: block;
 }
 
 .mobile-toggler .fa-bars,
@@ -32,12 +46,20 @@ body {
 
 .carousel-image {
     height: 20rem; /* Fixed height for all carousel images */
+    display: block;
+    margin: 0; /* Removes any default margin */
+
+    width: 100%;
+    padding: 0; /* Ensure no padding */
 }
 
 .slider-container {
     position: relative;
     overflow: hidden;
     max-width: 100%;
+    margin-top: 0;
+    padding-top: 0;
+    padding: 0;
 }
 
 .slides {
@@ -48,6 +70,10 @@ body {
 .slide {
     min-width: 100%;
     box-sizing: border-box;
+   
+    margin: 0; /* Ensures no margin around each slide */
+    padding: 0; /* Ensures no padding around each slide */
+ 
 }
 
 .static-text {
@@ -62,8 +88,9 @@ body {
 
 .speakers {
     background-color: #ffffff;
-    padding-top: 6rem;
+    /* padding-top: 6rem; */
     padding-bottom: 6rem;
+    margin-top: 0;
 }
 
 .speaker img {
@@ -80,11 +107,17 @@ body {
     transform: scale(1.1);
 }
 
+
+
+
+
+
 .slick-slide img {
     display: block;
     margin: 0 auto;
     width: auto;
     height: 100px;
+    
 }
 
 ul.flex li {
@@ -110,3 +143,67 @@ ul.flex li a:hover::after {
 .lighten-img {
     opacity: 0.8; /* Adjust this value to change the opacity */
 }
+
+.bold {
+    font-weight: 800; /* Bold */
+  }
+  
+
+
+
+/* Nav Dropdown */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 20px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown .dropbtn .caret {
+    margin-left: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+

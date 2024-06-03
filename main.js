@@ -18,7 +18,35 @@ menuToggle.addEventListener('click', () => {
     }
 });
 
+const countDownDate = new Date("December 19, 2024 15:37:25").getTime();
 
+// Update the countdown every 1 second
+const x = setInterval(function() {
+
+    
+    const now = new Date().getTime();
+
+ 
+    const distance = countDownDate - now;
+
+    
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the respective elements
+    document.querySelector(".countdown-element.days").innerText = days;
+    document.querySelector(".countdown-element.hours").innerText = hours;
+    document.querySelector(".countdown-element.minutes").innerText = minutes;
+    document.querySelector(".countdown-element.seconds").innerText = seconds;
+
+    // If the countdown is finished, write some text
+    if (distance < 0) {
+        clearInterval(x);
+        document.querySelector(".count-down-main").innerText = "EXPIRED";
+    }
+}, 1000);
 
 
 $(document).ready(function() {
@@ -105,5 +133,75 @@ $(document).ready(function() {
                 }
             }
         ]
+    });
+});
+
+
+
+
+//speaker effect 
+// Speaker Carousel
+const carouselContainer = document.getElementById('carousel-container');
+const carouselLeft = document.getElementById('carousel-left');
+const carouselRight = document.getElementById('carousel-right');
+
+let scrollAmount = 0;
+let itemWidth = 0;
+const items = carouselContainer.children;
+
+// Wait for images to load before calculating itemWidth
+window.addEventListener('load', () => {
+    itemWidth = items[0].offsetWidth; // Get itemWidth after images load
+    const containerWidth = carouselContainer.offsetWidth;
+
+    carouselLeft.onclick = () => {
+        if (scrollAmount > 0) {
+            scrollAmount -= itemWidth;
+            if (scrollAmount < 0) scrollAmount = 0;
+            centerItem(scrollAmount, containerWidth);
+        }
+    };
+
+    carouselRight.onclick = () => {
+        const maxScrollAmount = itemWidth * (items.length - 1);
+        if (scrollAmount < maxScrollAmount) {
+            scrollAmount += itemWidth;
+            if (scrollAmount > maxScrollAmount) scrollAmount = maxScrollAmount;
+            centerItem(scrollAmount, containerWidth);
+        }
+    };
+
+    function centerItem(scrollAmount, containerWidth) {
+        const newScrollLeft = scrollAmount - (containerWidth - itemWidth) / 2;
+        carouselContainer.scrollTo({
+            top: 0,
+            left: newScrollLeft,
+            behavior: 'smooth'
+        });
+    }
+});
+
+// Speaker Modal
+const modals = document.querySelectorAll('[data-modal]');
+
+modals.forEach(img => {
+    const modalId = img.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+
+    img.addEventListener('mouseenter', () => {
+        modal.classList.remove('hidden');
+    });
+
+    img.addEventListener('mouseleave', () => {
+        modal.classList.add('hidden');
+    });
+
+    // Ensure modal stays open when hovering over it
+    modal.addEventListener('mouseenter', () => {
+        modal.classList.remove('hidden');
+    });
+
+    modal.addEventListener('mouseleave', () => {
+        modal.classList.add('hidden');
     });
 });
