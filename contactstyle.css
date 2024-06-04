@@ -1,4 +1,5 @@
 /* Base styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +9,7 @@
 .header {
     min-height: 70vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(assets/Carosel2.JPG);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(assets/Carosel2.JPG);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -47,38 +48,35 @@
 }
 
 .hero-btn:hover {
-    border: 1px solid violet;
-    background: violet;
+    border: 1px solid white;
+    background: #071478;
     transition: 1s;
 }
 
+
 /* Media query for smaller screens */
+
 @media (max-width: 700px) {
     nav {
         padding: 2% 4%;
     }
-
     .text-box h1 {
         font-size: 30px;
     }
-
     .text-box p {
         font-size: 12px;
     }
-
     .hero-btn {
         padding: 10px 24px;
         font-size: 12px;
     }
-
     .nav-links ul li {
         display: block;
         padding: 10px 0;
     }
-
     .nav-links {
         position: absolute;
-        background: rgba(4,9,30,0.9);
+        background: rgba(4, 9, 30, 0.9);
         height: 100vh;
         width: 200px;
         top: 0;
@@ -87,14 +85,12 @@
         z-index: 2;
         transition: 1s;
     }
-
     nav .fa {
         display: block;
         color: #fff;
         font-size: 24px;
         cursor: pointer;
     }
-
     .nav-links ul {
         padding: 30px;
     }
@@ -104,18 +100,18 @@
     .text-box h1 {
         font-size: 24px;
     }
-
     .text-box p {
         font-size: 10px;
     }
-
     .hero-btn {
         padding: 8px 20px;
         font-size: 11px;
     }
 }
 
+
 /* Course section styles */
+
 .course {
     width: 80%;
     margin: auto;
@@ -157,8 +153,10 @@
 
 .course-col img {
     width: 100%;
-    height: 400px; /* Adjust the height to a medium size */
-    object-fit: cover; /* Ensure the image covers the given area while maintaining aspect ratio */
+    height: 400px;
+    /* Adjust the height to a medium size */
+    object-fit: cover;
+    /* Ensure the image covers the given area while maintaining aspect ratio */
     border-radius: 10px 10px 0 0;
 }
 
@@ -175,7 +173,9 @@
     box-shadow: 0 0 20px 0px rgba(186, 16, 16, 0.2);
 }
 
+
 /* Responsive styles for the course section */
+
 @media (max-width: 600px) {
     .row {
         flex-direction: column;
