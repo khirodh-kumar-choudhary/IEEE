@@ -4,76 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Committee Members</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-1sMhgpLZdJTr2Ys1uzFVX+Y9PwKaUUn0h8Vmq2KyNp7UXBmRRqPjGZkgbcuBQ5Ua40ZQNrZDk+uH/4XHfj+Jcw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-       body {
+        body {
+            background-color: #d2e0ec;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
+        }
+
+        .ccontainer {
+            width: 90%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            color: #1a202c;
         }
 
         .header {
-            background-color: #224e7d;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .committee-section {
-            margin: 20px;
-            background-color: #ffffff;
-            border: 2px solid #224e7d;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .section-title {
-            background-color: #224e7d;
-            color: white;
-            padding: 10px;
-            font-size: 20px;
-            border-bottom: 2px solid #92deed;
-            text-align: center;
-            margin: 0;
-            border-top-left-radius: 3px;
-            border-top-right-radius: 3px;
-        }
-
-        .committee-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 10px;
-        }
-
-        .member {
-            background-color: #ffffff;
-            border: 2px solid #003366;
-            border-radius: 5px;
-            margin: 10px;
-            width: 45%;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .member-title {
-            background-color: #419cbd;
-            color: #003366;
+            background-color: #071478;
             padding: 15px;
-            font-size: 18px;
+            border-radius: 5px;
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        ul {
+           
+            padding-left: 0;
+            font-size: 1.25rem;
+            list-style-type: disc;
+         
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+          
+            padding-left: 70px;
+        }
+
+        b {
             font-weight: bold;
-            border-bottom: 1px solid #003366;
         }
-
-        .member-institution {
-            background-color: whitesmoke;
-            color: #003366;
-            padding: 15px;
-            font-size: 16px;
-        }
-
 
         .mobile-toggler .fa-bars,
         .mobile-toggler .fa-x {
@@ -115,7 +99,7 @@
         }
 
         .dropdown .dropbtn {
-            font-size: 16px;
+            font-size: 1.25rem;
             border: none;
             outline: none;
             color: white;
@@ -161,313 +145,194 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
     </style>
 </head>
 
 <body>
-    <br><br><br>
-    <marquee behavior="fast-changing" direction="latest" class="text-4xl text-red-700"><b>NOTE : This website is currently in the process of adding data. </b></marquee>
-  
-    <nav class="z-50 bg-white shadow-lg fixed top-0 w-full">
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <div class="nav-links hidden md:flex justify-center items-center">
-                <ul class="flex space-x-10">
-                    <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="index.html">Home</a></li>
-                    <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="committee.html">Committee</a></li>
-                    <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="sponsors.html">Sponsors</a></li>
-                    <li class="relative group">
-                        <div class="dropdown">
-                            <a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="#">Author Guidelines <span class="caret"></span></a>
-                            <div class="dropdown-content hidden group-hover:block absolute bg-white shadow-lg mt-1">
-                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="CallforPapers.html">Call For Papers</a>
-                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Important Dates.html">Important Dates</a>
-                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="PaperSubmission.html">Paper-Submission</a>
-                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="ProgramSchedule.html">Program Shedule</a>
-                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Accomadation.html">Accomodation</a>
-                              
+    <section>
+        <nav class="z-50 bg-white shadow-lg fixed top-0 w-full">
+            <div class="container mx-auto flex justify-between items-center p-3">
+                <div class="nav-links hidden md:flex justify-center items-center">
+                    <ul class="flex space-x-4">
+                        <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold"
+                                href="index.html">Home</a></li>
+                        <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold"
+                                href="committee.html">Committee</a></li>
+                        <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold"
+                                href="sponsors.html">Sponsors</a></li>
+                        <li class="dropdown">
+                            <button
+                                class=" text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold">
+                                Author Guidelines <span class="caret"></span></button>
+                            <div class="dropdown-content">
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                                    href="CallforPapers.html">Call For Papers</a>
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                                    href="Important Dates.html">Important Dates</a>
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                                    href="PaperSubmission.html">Paper-Submission</a>
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                                    href="ProgramSchedule.html">Program Schedule</a>
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                                    href="Accommodation.html">Accommodation</a>
                             </div>
-                        </div>
-                    </li>
-                    <li class="relative group">
-                        <a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="registation.html">Registration</a>
-                    </li>
-                    <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="contacts.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="mobile-toggler md:hidden">
-                <div class="space-y-2" id="menu-toggle">
-                    <div class="w-8 h-1 bg-gray-700 transition transform duration-300"></div>
-                    <div class="w-8 h-1 bg-gray-700 transition transform duration-300"></div>
-                    <div class="w-8 h-1 bg-gray-700 transition transform duration-300"></div>
+                        </li>
+                        <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold"
+                                href="registration.html">Registration</a></li>
+                        <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold"
+                                href="contacts.html">Contact</a></li>
+                    </ul>
                 </div>
-            </div>
-        </div>
-        <div class="mobile-menu fixed inset-0 bg-black bg-opacity-50 w-full h-full hidden transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
-            <div class="bg-white w-2/4 h-full p-6">
-                <div class="flex justify-end">
-                    <div id="menu-close" class="cursor-pointer">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
+                <div class="mobile-toggler md:hidden">
+                    <div class="space-y-2" id="menu-toggle">
+                        <div class="w-8 h-1 bg-gray-700 transition transform duration-300"></div>
+                        <div class="w-8 h-1 bg-gray-700 transition transform duration-300"></div>
+                        <div class="w-8 h-1 bg-gray-700 transition transform duration-300"></div>
                     </div>
                 </div>
-                <ul class="space-y-6 flex flex-col mt-10">
-                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="index.html">Home</a></li>
-                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="committee.html">Committee</a></li>
-                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="sponsors.html">Sponsors</a></li>
-                    <li class="relative group">
-                        <a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300" href="#">Author Guidelines </a>
-                        <div class="dropdown-content hidden group-hover:block absolute bg-white shadow-lg mt-1">
-                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="CallforPapers.html">Call For Papers</a>
-                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Important Dates.html">Important Dates</a>
-                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="PaperSubmission.html">Paper-Submission</a>
-                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="ProgramSchedule.html">Program Shedule</a>
-                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Accomadation.html">Accomodation</a>
-                          
+            </div>
+            <div
+                class="mobile-menu fixed inset-0 bg-black bg-opacity-50 w-full h-full hidden transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
+                <div class="bg-white w-2/4 h-full p-6">
+                    <div class="flex justify-end">
+                        <div id="menu-close" class="cursor-pointer">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
                         </div>
-                    </li>
-                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="registration.html">Registration</a></li>
-                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="contacts.html">Contact</a></li>
-                </ul>
+                    </div>
+                    <ul class="space-y-6 flex flex-col mt-10">
+                        <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300"
+                                href="index.html">Home</a></li>
+                        <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300"
+                                href="committee.html">Committee</a></li>
+                        <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300"
+                                href="sponsors.html">Sponsors</a></li>
+                        <li class="relative group">
+                            <a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300"
+                                href="#">Author Guidelines</a>
+                            <div
+                                class="dropdown-content hidden group-hover:block absolute bg-white shadow-lg mt-1">
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                                    href="CallforPapers.html">Call For Papers</a>
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                                    href="Important Dates.html">Important Dates</a>
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                                    href="PaperSubmission.html">Paper-Submission</a>
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                                                                href="ProgramSchedule.html">Program Schedule</a>
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                                    href="Accommodation.html">Accommodation</a>
+                            </div>
+                        </li>
+                        <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300"
+                                href="registration.html">Registration</a></li>
+                        <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300"
+                                href="contacts.html">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-   
-    <br><br>
-
-    <div class="header">
-        <h1 class="text-4xl">Committee Members</h1>
+        </nav>
+    </section>
+    <br>
+    <div class="ccontainer">
+        <h1 class="text-4xl text-blue-900 font-bold">Committee Members</h1>
+        <br>
+        <div class="header">Patron</div>
+        <ul>
+            <li><b>Prof.(Dr) Muktikanta Mishra</b>, President CUTM, (Odisha & AP)</li>
+            <li><b>Prof DN Rao</b>, Vice President CUTM, (Odisha & AP)</li>
+        </ul>
+        <div class="header">General Chair</div>
+        <ul>
+            <li><b>Prof.(Dr) Supriya Pattnaik</b>, Vice Chancellor CUTM, (Odisha)</li>
+            <li><b>Prof.(Dr) Anita Patra</b>, Registrar, CUTM, (Odisha)</li>
+            <li><b>Prof.(Dr) Subranshu Samantaray</b>, IITB, Odisha</li>
+        </ul>
+        <div class="header">Honorary Chair Person</div>
+        <ul>
+            <li><b>Prof.(Dr) Ganapati Panda</b> (EX-Deputy Director, IITB, Odisha)</li>
+            <li><b>Prof. A.K Tripathy</b>, PCIL (Govt. Of India)</li>
+            <li><b>Prof.(Dr) Kyay Kaynak</b>, Istanbul, Turkey</li>
+        </ul>
+        <div class="header">Program Chair</div>
+        <ul>
+            <li><b>Dr. Prafulla Kumar Panda </b> (Dean, SOET, Paralakhemundi)</li>
+            <li><b>Dr. DK Sahoo</b> (Assoc. Prof. ECE, CUTM)</li>
+        </ul>
+        <div class="header">Convener</div>
+        <ul>
+            <li><b>Prof.(Dr) Ashok Misra</b> (Department of Mathematics, SoAs, CUTM, Paralakhemundi)</li>
+        </ul>
+        <div class="header">Co-convener</div>
+        <ul>
+            <li><b>Prof.(Dr) Mihir Mohanty</b></li>
+            <li><b>Prof. Prabhat Pattnaik</b>, HOD Department of ECE, CUTM, Paralakhemundi</li>
+        </ul>
+        <div class="header">Publication Committee</div>
+        <ul>
+            <li>Dr. P.K. Sahoo, IITB</li>
+            <li>Dr. Ramesh Ch. Mohaty, CUTM</li>
+            <li>Dr. Abhisek Das (Chair)</li>
+            <li>Dr. Satya Narayan Dhal (Physics)</li>
+            <li>Dr. Abinash Ratha</li>
+            <li>Dr. Pangya Parimita Pradhan</li>
+        </ul>
+        <div class="header">Finance Chair</div>
+        <ul>
+            <li>Prof. S.N. Padhi</li>
+            <li>Prof. Prabhat Ranjan Sahoo</li>
+            <li>Graya Chama Debray</li>
+        </ul>
+        <div class="header">Publication Chair</div>
+        <ul>
+            <li>Samod Patra</li>
+            <li>Prof. K.C. Sethi</li>
+        </ul>
+        <div class="header">Track Chair</div>
+        <ul>
+            <li>Dr. Prajna Pani</li>
+            <li>Dr. Ramesh Mohanty</li>
+            <li>Dr. S.K. Biswal</li>
+        </ul>
+        <div class="header">Safety Committee</div>
+        <ul>
+            <li>Prof. Prafulla Panda</li>
+            <li>Prof. Durga Padhi</li>
+            <li>Prof. S.P. Nada</li>
+            <li>Prof. Prajna Pani</li>
+            <li>Prof. Debendra Reddy</li>
+            <li>Prof. Dr. Ashok Mishra</li>
+            <li>Prof. Debendra Kumar Sahoo</li>
+            <li>Prof. Dr. Sagar Maitra</li>
+            <li>Prof. Prabhat Patnaik (HOD, ECE & EEE)</li>
+            <li>Prof. Sujit Mishra (HOD, MECH)</li>
+            <li>Prof. Debendra Maharana (HOD, CSE)</li>
+        </ul>
+        <div class="header">Registration Committee</div>
+        <ul>
+            <li>Prof. N. Jeevaratnam (Chair)</li>
+            <li>Prof. Subhrashree Pritichanda</li>
+            <li>Prof. Rajesh Majhi</li>
+            <li>Prof. Aditya Pati</li>
+            <li>Prof. Toffan Nahak</li>
+        </ul>
+        <div class="header">Local Organizing Committee</div>
+        <ul>
+            <li>Prof. Durga Prasad Padhi</li>
+            <li>Prof. Satyanarayan Padhy</li>
+            <li>Prof. Girish Ratha</li>
+            <li>Prof. Jagannath Padhy</li>
+            <li>Prof. Parle Kalyan Chakravarty</li>
+            <li>Prof. (Dr) Susanta Patnaik</li>
+        </ul>
     </div>
-
-    <div class="committee-section">
-        <h2 class="section-title">CHIEF PATRON</h2>
-        <div class="committee-container">
-            <div class="member">
-                <div class="member-title">Prof. Dr. Muktikanta Mishra</div>
-                <div class="member-institution">President of CUTM</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. Dr. D.N Rao</div>
-                <div class="member-institution">Vice-President of CUTM</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="committee-section">
-        <h2 class="section-title">GENERAL CHAIR</h2>
-        <div class="committee-container">
-            <div class="member">
-                <div class="member-title">Prof. Dr. Supriya Pattnayak</div>
-                <div class="member-institution">VC of CUTM</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. Dr. Anita Patra</div>
-                <div class="member-institution">Registrar of CUTM</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. Dr. Subranshu Samantaray</div>
-                <div class="member-institution">IIIB</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="committee-section">
-        <h2 class="section-title">HONOURARY CHAIR</h2>
-        <div class="committee-container">
-            <div class="member">
-                <div class="member-title">Prof. Dr. Ganapati Panda</div>
-                <div class="member-institution">Ex-Deputy Director IIIB</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. A.K Tripathy</div>
-                <div class="member-institution">PCIL (Govt. of India)</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. Dr. Okyay Kaynak</div>
-                <div class="member-institution">Istanbul, Turkey</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Huijen Gao</div>
-                <div class="member-institution">HIT, China</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="committee-section">
-        <h2 class="section-title">PROGRAM CHAIR</h2>
-        <div class="committee-container">
-            <div class="member">
-                <div class="member-title">Dr. Prafulla Panda</div>
-                <div class="member-institution">Dean, SoET, CUTM</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Dr. DK Sahoo</div>
-                <div class="member-institution">Assoc. Prof, ECE, CUTM</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="committee-section">
-        <h2 class="section-title">CONVENOR</h2>
-        <div class="committee-container">
-            <div class="member">
-                <div class="member-title">Prof. Dr. Ashok Mishra</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="committee-section">
-        <h2 class="section-title">CO-CONVENOR</h2>
-        <div class="committee-container">
-            <div class="member">
-                <div class="member-title">Prof. Dr. Mihir N Mohant</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. Prabhat Pattnaik</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="committee-section">
-        <h2 class="section-title">PUBLICATION COMMITTEE</h2>
-        <div class="committee-container">
-            <div class="member">
-                <div class="member-title">Dr. P.K Sahoo</div>
-                <div class="member-institution">IIIB</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Dr. Ramesh Ch. Mohanty</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Dr. Abishek Das</div>
-                <div class="member-institution">Chair</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Dr. Satya N Dhal</div>
-                <div class="member-institution">Physics</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Dr. Abinash Ratha</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Dr. Prajna P. Pradhan</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Dr. Satyajit Mishra</div>
-                <div class="member-institution">Mechanical</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Dr. Sagar Maitra</div>
-                <div class="member-institution">Agriculture</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="committee-section">
-        <h2 class="section-title">FINANCE CHAIR</h2>
-        <div class="committee-container">
-            <div class="member">
-                <div class="member-title">Prof. Sandipan Pine</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. K.C Sethi</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="committee-section">
-        <h2 class="section-title">TRACK CHAIR</h2>
-        <div class="committee-container">
-            <div class="member">
-                <div class="member-title">Dr. Ramesh Mohanty</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Dr. S.K Biswal</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="committee-section">
-        <h2 class="section-title">ORGANISING COMMITTEE</h2>
-        <div class="committee-container">
-            <div class="member">
-                <div class="member-title">Prof. Prafulla Panda</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. Durga Padhi</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. S.P Nanda</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. Prajna Pani</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. Debendra Reddy</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. Ashok Mishra</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. DK Sahoo</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. Sagar Maitra</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. Prabhat Pattnaik</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="committee-section">
-        <h2 class="section-title">REGISTRATION COMMITTEE</h2>
-        <div class="committee-container">
-            <div class="member">
-                <div class="member-title">Prof. G.K Sahu</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. Jeevarathnam</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. Subhashree Prtichhanda</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. Rajesh Majhi</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="committee-section">
-        <h2 class="section-title">LOCAL ORGANISING COMMITTEE</h2>
-        <div class="committee-container">
-            <div class="member">
-                <div class="member-title">Prof. Durga Padhi</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. Satyanarayana Padhi</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. Girish Rath</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. Susanta Pattnaik</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. Jagannath Pandhi</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. Kalyan Chakravarthy</div>
-            </div>
-            <div class="member">
-                <div class="member-title">Prof. Sushant Pattnaik</div>
-            </div>
-        </div>
-    </div>
-
-<hr>
-    <div id="footer-placeholder"></div>
+    <section>
+        <div id="footer-placeholder"></div>
+    </section>
+    
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -479,3 +344,4 @@
 </body>
 
 </html>
+

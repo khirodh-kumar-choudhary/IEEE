@@ -12,34 +12,50 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: white;
+           
             color: #333;
         }
-        .container {
-            margin: auto;
+        .ccontainer {
+            width: 80%;
+            margin: 20px auto; /* Added top margin */
             overflow: hidden;
+            height: calc(250vh - 40px); /* Adjust height to account for margin */
         }
         .content {
             background: #fff;
             color: #333;
             padding: 20px;
-            
+            height: 100%; /* Fixed height */
+            box-sizing: border-box; /* Ensure padding is included in height calculation */
         }
         .content h2 {
-            color: #1c7eef;
+            color: #030398;
             text-align: center;
+            font-size:300%;
+            font-weight: 500;
+            
         }
         .content p {
             line-height: 1.6;
+            font-size:180%;
+            align-items: center;
+            align-content: first baseline;
         }
         .important {
             color: black;
-            font-weight: lighter;
+            font-weight: dark;
         }
-        .online-submission, .submission-system {
-            color: #1c7eef;
+        .online-submission, .submission-guidelines {
+            color: #030398;
             font-weight: bold;
             text-align: center;
+            font-size:300%;
+        }
+        .submission-system{
+            color: #030398;
+            font-weight: 30px;
+            text-align: left;
+           
         }
         @media (max-width: 768px) {
             .container {
@@ -209,23 +225,40 @@
             </div>
         </div>
     </nav>
-<br><br><br><br>
-    <div class="container">
-        <div class="content">
-            <h2 class="text-4xl font-semibold">Paper Submission for IEEE Scopes 2024 Conference</h2>
-            <br><br>
-            <p>If you are a returning author, you should review the paper kit, and note that the paper kit contains expanded information about the review process and preparing for a presentation at IEEE Scopes 2024. <span class="important">Important:</span></p>
-            <p class="important">IEEE Scopes 2024 requires that each accepted paper be presented by one of the authors in-person or virtually at the conference site or online according to the schedule published. Conference proceedings that meet IEEE quality review standards may be eligible for inclusion in the IEEE Xplore Digital Library. IEEE reserves the right not to publish any proceedings that do not meet these standards. Conference related communications such as conference website, email, direct mail solicitation, etc. may not reference or guarantee inclusion in the IEEE Xplore Digital Library. Misrepresentation of this is considered a violation of IEEE brand guidelines. Papers must include a short discussion on relation to prior work in the field. The discussion is not required to be in a separate section alone.</p>
-            <p>Papers may optionally include a 7th page containing only references.</p>
-            <p>Any paper with a 7th page containing ANY non-reference content will be rejected without review. Review the paper kit for full details.</p>
-            <br>
-            <p class="online-submission text-3xl">Online Paper Submission</p>
-            <br>
-            <p>The online paper submission system will open on <strong>October 30, 2024</strong>. Please read over the paper kit for formatting instructions.</p>
-            <br>
-            <p class="submission-system text-3xl">Paper Submission Link</p>
-            <p>Details for paper submission will be provided soon.</p>
-        </div>
+<br>
+<div class="ccontainer">
+    <div class="content">
+        <h2>Paper Submission for IEEE Scopes 2024 Conference</h2>
+        <br><br>
+        <p>If you are a returning author, you should review the paper kit, and note that the paper kit contains expanded information about the review process and preparing for a presentation at IEEE Scopes 2024. <span class="important">Important:</span></p>
+        <p class="important">IEEE Scopes 2024 requires that each accepted paper be presented by one of the authors in-person or virtually at the conference site or online according to the schedule published. Conference proceedings that meet IEEE quality review standards may be eligible for inclusion in the IEEE Xplore Digital Library. IEEE reserves the right not to publish any proceedings that do not meet these standards. Conference related communications such as conference website, email, direct mail solicitation, etc. may not reference or guarantee inclusion in the IEEE Xplore Digital Library. Misrepresentation of this is considered a violation of IEEE brand guidelines. Papers must include a short discussion on relation to prior work in the field. The discussion is not required to be in a separate section alone.</p>
+        <p>Papers may optionally include a 7th page containing only references.</p>
+        <br>
+        <p class="submission-guidelines">Submission Guidelines</p>
+        <br>
+        <p>SCOPES-CUTM 2024 welcomes papers related to the conference theme, Cognitive, Green and Ubiquitous Computing. For further information, please refer to the Call for Papers.</p>
+        <p>The following instructions should be followed to make a successful submission:</p>
+        <p class="submission-system">Paper Size:</p>
+        <p>All submissions should be written in English with a maximum paper length of Six (6) printed pages including figures and references. Papers exceeding 8 pages will not be accepted at SCOPES-CUTM 2024.</p>
+        <br><p class="submission-system">Paper Template:</p>
+        <p>All submissions should be written in English with a maximum paper length of Six (6) printed pages including figures and references. Papers exceeding 8 pages will not be accepted at SCOPES-CUTM 2024.</p>
+        <br><p class="submission-system">Paper Submission Method:</p>
+        <p>Any paper with a 7th page containing ANY non-reference content will be rejected without review. Review the paper kit for full details.</p>
+        <br><p class="submission-system">Paper Format:</p>
+        <p>NOTE: Manuscripts that do not conform to the formatting guidelines will be removed from further consideration without review.</p>
+        <br><p class="submission-system">IEEE Policies:</p>
+        <p>Papers are reviewed on the basis that they do not contain plagiarized material and have not been submitted to any other conference at the same time (double submission). These matters are taken very seriously and the IEEE Communications society will take action against any author who has engaged in either practice.</p>
+        <br><p class="submission-system">Plagiarism:</p>
+        <p>Learn how to avoid plagiarism. IEEE defines plagiarism as the use of another’s ideas, processes, results, or words without explicitly acknowledging the original author and source.
+             <br>Plagiarism in any form is unacceptable and is considered a serious breach of professional conduct, with potentially severe ethical and legal consequences ( IEEE Publication Services and Products Board Operations Manual, Section 8.2.1.B.7. ). Follow proper citation practices noted above to avoid plagiarism. 
+             <br>All papers are checked for plagiarism before publication in the IEEE Xplore® Digital Library. I</p>
+        <p class="online-submission">Online Paper Submission</p>
+        <br>
+        <p>The online paper submission system will open on <strong>October 30, 2024</strong>. Please read over the paper kit for formatting instructions.</p>
+        <p class="online-submission">Paper Submission Link</p>
+        <br>
+        <p>Details for paper submission will be provided soon.</p>
+    </div>
     </div>
     <hr>
     <div id="footer-placeholder"></div>
