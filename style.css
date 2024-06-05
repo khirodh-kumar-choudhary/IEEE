@@ -7,21 +7,20 @@
 html,
 body {
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 .iee-logo img {
     height: 170px;
     width: 170px;
-   
-    object-fit: cover; 
+    object-fit: cover;
 }
 
-.cutm-logo img{
+.cutm-logo img {
     height: 190px;
     width: 130px;
-   
-   
 }
+
 .slider img,
 .about-image img,
 .speakers-slides img,
@@ -45,12 +44,14 @@ body {
 }
 
 .carousel-image {
-    height: 20rem; /* Fixed height for all carousel images */
+    height: 20rem;
+    /* Fixed height for all carousel images */
     display: block;
-    margin: 0; /* Removes any default margin */
-
+    margin: 0;
+    /* Removes any default margin */
     width: 100%;
-    padding: 0; /* Ensure no padding */
+    padding: 0;
+    /* Ensure no padding */
 }
 
 .slider-container {
@@ -70,10 +71,10 @@ body {
 .slide {
     min-width: 100%;
     box-sizing: border-box;
-   
-    margin: 0; /* Ensures no margin around each slide */
-    padding: 0; /* Ensures no padding around each slide */
- 
+    margin: 0;
+    /* Ensures no margin around each slide */
+    padding: 0;
+    /* Ensures no padding around each slide */
 }
 
 .static-text {
@@ -107,17 +108,11 @@ body {
     transform: scale(1.1);
 }
 
-
-
-
-
-
 .slick-slide img {
     display: block;
     margin: 0 auto;
     width: auto;
     height: 100px;
-    
 }
 
 ul.flex li {
@@ -141,24 +136,25 @@ ul.flex li a:hover::after {
 }
 
 .lighten-img {
-    opacity: 0.8; /* Adjust this value to change the opacity */
+    opacity: 0.8;
+    /* Adjust this value to change the opacity */
 }
 
 .bold {
-    font-weight: 800; /* Bold */
-  }
-  
-
+    font-weight: 800;
+    /* Bold */
+}
 
 
 /* Nav Dropdown */
+
 .dropdown {
     float: left;
     overflow: hidden;
 }
 
 .dropdown .dropbtn {
-    font-size: 16px;  
+    font-size: 16px;
     border: none;
     outline: none;
     color: white;
@@ -184,7 +180,7 @@ ul.flex li a:hover::after {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -204,6 +200,3 @@ ul.flex li a:hover::after {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-
-
