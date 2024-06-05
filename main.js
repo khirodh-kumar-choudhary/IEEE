@@ -204,4 +204,20 @@ modals.forEach(img => {
     modal.addEventListener('mouseleave', () => {
         modal.classList.add('hidden');
     });
+
+
 });
+
+// Read more functionality 
+
+    document.getElementById('read-more').addEventListener('click', function() {
+        var moreText = document.getElementById('more-text');
+        var button = this;
+        if (moreText.style.display === 'none') {
+            moreText.style.display = 'block';
+            button.textContent = 'Read Less';
+        } else {
+            moreText.style.display = 'none';
+            button.textContent = 'Read More';
+        }
+    });
