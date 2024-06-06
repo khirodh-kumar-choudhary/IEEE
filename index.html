@@ -37,19 +37,25 @@
                 <img src="assets/LOGO_Updated.png" alt="iee-logo" class="h-24 md:h-32 w-auto overflow-hidden">
                 <h2 class="text-xs md:text-lg font-semibold text-blue-900">IEEE SCOPES 2024</h2>
             </div>
+          
         </div>
     </div>
 
     <!-- Navigation Bar -->
     <nav class="sticky top-0 z-50 bg-white shadow-lg">
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <div class="nav-links hidden md:flex justify-center items-center ">
-                <ul class="flex space-x-20 items-center justify-center px-20">
+        <div class="container md:mr-10 mx-auto flex justify-between items-center p-2">
+            <div class="nav-links hidden md:flex justify-center items-center">
+                <ul class="flex space-x-6">
                     <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 fw-semibold" href="index.html">Home</a></li>
                     <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 fw-semibold" href="committee.html">Committee</a></li>
                     <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 fw-semibold" href="sponsors.html">Sponsors</a></li>
                     <li class="relative group">
-                        <a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300" href="#">Author Guidelines <span class="caret"></span></a>
+                        <a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 flex items-center" href="#">
+                            Author Guidelines
+                            <svg class="w-6 h-6 ml-1 text-gray-500 group-hover:text-gray-700 transition duration-300 dropdown-indicator" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
                         <div class="dropdown-content hidden group-hover:block absolute bg-white shadow-lg mt-1">
                             <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100 " href="CallforPapers.html">Call For Papers</a>
                             <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100 " href="Important Dates.html">Important Dates</a>
@@ -64,6 +70,8 @@
                     <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 " href="contacts.html">Contact</a></li>
                 </ul>
             </div>
+        </div>
+        
             <div class="mobile-toggler md:hidden">
                 <div class="space-y-2" id="menu-toggle">
                     <div class="w-8 h-1 bg-gray-700 transition transform duration-300"></div>
@@ -71,37 +79,41 @@
                     <div class="w-8 h-1 bg-gray-700 transition transform duration-300"></div>
                 </div>
             </div>
-        </div>
-        <div class="mobile-menu fixed inset-0 bg-black bg-opacity-50 w-full h-full hidden transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
-            <div class="bg-white w-2/4 h-full p-6">
-                <div class="flex justify-end">
-                    <div id="menu-close" class="cursor-pointer">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </div>
-                </div>
-                <ul class="space-y-6 flex flex-col mt-10">
-                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300 bold" href="index.html">Home</a></li>
-                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="committee.html">Committee</a></li>
-                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="sponsors.html">Sponsors</a></li>
-                    <li class="relative group">
-                        <a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300" href="#">Author Guidelines</a>
-                        <div class="dropdown-content hidden group-hover:block absolute bg-white shadow-lg mt-1">
-                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="CallforPapers.html">Call For Papers</a>
-                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Important Dates.html">Important Dates</a>
-                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="PaperSubmission.html">Paper-Submission</a>
-                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="ProgramSchedule.html">Program Shedule</a>
-                            <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Accomadation.html">Accomodation</a>
-
-
-                        </div>
-                    </li>
-                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="registation.html">Registration</a></li>
-                    <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="contacts.html">Contact</a></li>
-                </ul>
             </div>
-        </div>
+            <div class="mobile-menu fixed inset-0 bg-black bg-opacity-50 w-full h-full hidden transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
+                <div class="bg-white w-2/4 h-full p-6">
+                    <div class="flex justify-end">
+                        <div id="menu-close" class="cursor-pointer">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <ul class="space-y-6 flex flex-col mt-10">
+                        <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300 bold" href="index.html">Home</a></li>
+                        <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="committee.html">Committee</a></li>
+                        <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="sponsors.html">Sponsors</a></li>
+                        <li class="relative group">
+                            <a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 flex items-center">
+                                Author Guidelines
+                                <svg class="w-6 h-6 ml-1 text-gray-500 group-hover:text-gray-700 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </a>
+                            <div class="dropdown-content hidden group-hover:block absolute bg-white shadow-lg mt-1">
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="CallforPapers.html">Call For Papers</a>
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Important Dates.html">Important Dates</a>
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="PaperSubmission.html">Paper-Submission</a>
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="ProgramSchedule.html">Program Schedule</a>
+                                <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Accomadation.html">Accommodation</a>
+                            </div>
+                        </li>
+                        <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="registation.html">Registration</a></li>
+                        <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="contacts.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
     </nav>
 
     <!-- Marquee Section -->
@@ -119,42 +131,42 @@
 
                 <!-- Count Down -->
                 <div class="flex items-start justify-center w-full gap-4 count-down-main">
-                    <div class="timer w-16">
+                    <div class="timer w-14">
                         <div class=" bg-indigo-600 py-4 px-2 rounded-lg overflow-hidden">
                             <h3 class="countdown-element days font-Cormorant font-semibold text-2xl text-white text-center">
                             </h3>
                         </div>
-                        <p class="bg-white text-lg font-Cormorant font-semibold text-gray-900 mt-1 text-center w-full">Days</p>
+                        <p class="bg-white text-sm font-Cormorant font-semibold text-gray-900 mt-1 text-center w-full">Days</p>
                     </div>
                     <h3 class="font-manrope font-semibold text-2xl text-gray-900">:</h3>
-                    <div class="timer w-16">
+                    <div class="timer w-14">
                         <div class=" bg-indigo-600 py-4 px-2 rounded-lg overflow-hidden">
                             <h3 class="countdown-element hours font-Cormorant font-semibold text-2xl text-white text-center">
                             </h3>
                         </div>
-                        <p class="bg-white text-lg font-Cormorant font-semibold text-gray-900 mt-1 text-center w-full">Hours</p>
+                        <p class="bg-white text-sm font-Cormorant font-semibold text-gray-900 mt-1 text-center w-full">Hours</p>
                     </div>
                     <h3 class="font-manrope font-semibold text-2xl text-gray-900">:</h3>
-                    <div class="timer w-16">
+                    <div class="timer w-14">
                         <div class=" bg-indigo-600 py-4 px-2 rounded-lg overflow-hidden">
                             <h3 class="countdown-element minutes font-Cormorant font-semibold text-2xl text-white text-center">
                             </h3>
                         </div>
-                        <p class="bg-white text-lg font-Cormorant font-semibold text-gray-900 mt-1 text-center w-full">minutes</p>
+                        <p class="bg-white text-sm font-Cormorant font-semibold text-gray-900 mt-1 text-center w-full">minute</p>
                     </div>
                     <h3 class="font-manrope font-semibold text-2xl text-gray-900">:</h3>
-                    <div class="timer w-16">
+                    <div class="timer w-14">
                         <div class=" bg-indigo-600 py-4 px-2 rounded-lg overflow-hidden ">
                             <h3 class="countdown-element seconds font-Cormorant font-semibold text-2xl text-white text-center animate-countinsecond">
                             </h3>
                         </div>
-                        <p class="bg-white text-lg font-Cormorant font-semibold text-gray-900 mt-1 text-center w-full">second</p>
+                        <p class="bg-white text-sm font-Cormorant font-semibold text-gray-900 mt-1 text-center w-full">second</p>
                     </div>
                 </div>
 
                 <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold">Welcome to the IEEE Conference</h2>
                 <br>
-                <button type="button" class="btn btn-primary btn-lg bg-blue-500 text-white py-2 px-4 rounded">Register Now</button>
+                <button id="registerBtn" type="button" class="btn btn-primary btn-lg bg-blue-500 text-white py-2 px-4 rounded">Register Now</button>
 
 
 
@@ -581,6 +593,11 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./main.js"></script>
+    <script>
+        document.getElementById("registerBtn").addEventListener("click", function() {
+          window.location.href = "registerform.html";
+        });
+      </script>
 
 </body>
 

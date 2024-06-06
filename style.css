@@ -10,11 +10,58 @@ body {
     overflow-x: hidden;
 }
 
-.iee-logo img {
-    height: 170px;
-    width: 170px;
-    object-fit: cover;
+
+
+
+
+/* For mobile */
+@media (max-width: 767px) {
+    .iee-logo {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        padding: 10px; /* Adjust padding as needed */
+    }
+    .iee-logo img {
+        height: 64px; /* Adjust height for mobile */
+        width: auto;
+    }
+    .iee-logo h2 {
+        font-size: 16px; /* Adjust font size for mobile */
+        margin-top: 5px; /* Adjust margin as needed */
+    }
 }
+
+/* For tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .iee-logo {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        padding: 10px; /* Adjust padding as needed */
+    }
+    .iee-logo img {
+        height: 80px; /* Adjust height for tablet */
+        width: auto;
+    }
+    .iee-logo h2 {
+        font-size: 18px; /* Adjust font size for tablet */
+        margin-top: 5px; /* Adjust margin as needed */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .cutm-logo img {
     height: 190px;

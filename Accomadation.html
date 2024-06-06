@@ -180,12 +180,17 @@
     <nav class="z-50 bg-white shadow-lg fixed top-0 w-full">
         <div class="container mx-auto flex justify-between items-center p-4">
             <div class="nav-links hidden md:flex justify-center items-center">
-                <ul class="flex space-x-10">
+                <ul class="flex space-x-4">
                     <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="index.html">Home</a></li>
                     <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="committee.html">Committee</a></li>
                     <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="sponsors.html">Sponsors</a></li>
                     <li class="dropdown">
-                        <button class=" text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold">Author Guidelines <span class="caret"></span></button>
+                        <a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 flex items-center font-bold" href="#">
+                            Author Guidelines
+                            <svg class="w-6 h-6 ml-1 text-gray-500 group-hover:text-gray-700 transition duration-300 dropdown-indicator" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
                         <div class="dropdown-content">
                             <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="CallforPapers.html">Call For Papers</a>
                             <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Important Dates.html">Important Dates</a>

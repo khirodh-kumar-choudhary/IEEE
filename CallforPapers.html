@@ -236,6 +236,12 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
+
+        .main ul{
+            list-style-type: disc;
+            padding-left: 50px;
+        }
     </style>
 </head>
 
@@ -249,8 +255,12 @@
                         <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="committee.html">Committee</a></li>
                         <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="sponsors.html">Sponsors</a></li>
                         <li class="dropdown">
-                            <button class=" text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold">
-                                Author Guidelines <span class="caret"></span></button>
+                            <a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 flex items-center font-bold" href="#">
+                                Author Guidelines
+                                <svg class="w-6 h-6 ml-1 text-gray-500 group-hover:text-gray-700 transition duration-300 dropdown-indicator" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </a>
                             <div class="dropdown-content">
                                 <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="CallforPapers.html">Call For Papers</a>
                                 <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Important Dates.html">Important Dates</a>
@@ -259,7 +269,7 @@
                                 <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Accommodation.html">Accommodation</a>
                             </div>
                         </li>
-                        <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="registration.html">Registration</a></li>
+                        <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="registation.html">Registration</a></li>
                         <li><a class="text-2xl text-gray-700 hover:text-gray-900 transition duration-300 font-bold" href="contacts.html">Contact</a></li>
                     </ul>
                 </div>
@@ -295,7 +305,7 @@
                                 <a class="text-xl block px-4 py-2 text-gray-700 hover:bg-gray-100" href="Accommodation.html">Accommodation</a>
                             </div>
                         </li>
-                        <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="registration.html">Registration</a></li>
+                        <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="registation.html">Registration</a></li>
                         <li><a class="text-xl text-gray-700 hover:text-gray-900 transition duration-300" href="contacts.html">Contact</a></li>
                     </ul>
                 </div>
@@ -312,11 +322,14 @@
 
     <div class="container main justify-end">
         <section>
-            <p class="text-justify text-xl">The conference, organized by Centurion University of Technology and Management (CUTM), is a premier event focusing on the latest advancements and research in the fields of Signal Processing, Communication, Power, and Embedded Systems. Previously
+            <p class="text-justify text-xl">The conference, organized by Centurion University of Technology and Management (CUTM), is a premier event focusing on the latest advancements and research in the fields of Signal Processing, Communication, Power, and Embedded Systems. 
+                <!-- Previously
                 held at prestigious locations including IIT Delhi, IIT Kanpur, IISc Bengaluru, and others, this conference aims to bring together researchers, academicians, and industry experts to share knowledge, discuss new challenges, and explore innovative
-                solutions in these areas. The conference provides a unique platform for networking, collaboration, and dissemination of cutting-edge research in these fields.</p>
+                solutions in these areas. The conference provides a unique platform for networking, collaboration, and dissemination of cutting-edge research in these fields.
+             -->
+            </p>
         </section>
-        <section>
+        <section class="main">
             <h3 class="text-blue-900 font-bold text-2xl">The conference themes, grouped in various tracks, are the following (but are not limited to)</h3>
             <table>
                 <thead>
@@ -327,7 +340,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td data-label="Track.No">Track 1</td>
+                        <td data-label="Track.No">Track 1: Signal Processing</td>
                         <td data-label="Themes">
                             <ul>
                                 <li>Adaptive Signal Processing</li>
@@ -338,7 +351,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td data-label="Track.No">Track 2</td>
+                        <td data-label="Track.No">Track 2: Communication Systems</td>
                         <td data-label="Themes">
                             <ul>
                                 <li>Image Processing</li>
@@ -350,7 +363,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td data-label="Track.No">Track 3</td>
+                        <td data-label="Track.No">Track 3: Natural Language Processing</td>
                         <td data-label="Themes">
                             <ul>
                                 <li>Communication Engineering (5G & 6G Techniques)</li>
@@ -362,7 +375,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td data-label="Track.No">Track 4</td>
+                        <td data-label="Track.No">Track 4: Embedded System</td>
                         <td data-label="Themes">
                             <ul>
                                 <li>Natural Language Processing</li>
@@ -372,7 +385,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td data-label="Track.No">Track 5</td>
+                        <td data-label="Track.No">Track 5: Power Systems</td>
                         <td data-label="Themes">
                             <ul>
                                 <li>Embedded System</li>
@@ -385,7 +398,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td data-label="Track.No">Track 6</td>
+                        <td data-label="Track.No">Track 6: Power Electronics and Applications</td>
                         <td data-label="Themes">
                             <ul>
                                 <li>Smart Systems</li>
@@ -398,7 +411,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td data-label="Track.No">Track 7</td>
+                        <td data-label="Track.No">Track 7: Data Science</td>
                         <td data-label="Themes">
                             <ul>
                                 <li>Cloud Computing, Big Data Analysis</li>
@@ -411,7 +424,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td data-label="Track.No">Track 8</td>
+                        <td data-label="Track.No">Track 8: Advanced Mechanical Systems</td>
                         <td data-label="Themes">
                             <ul>
                                 <li>AI Applications to Finance, Weather, Earthquake</li>
@@ -425,7 +438,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td data-label="Track.No">Track 9</td>
+                        <td data-label="Track.No">Track 9: Advanced Agricultural Engineering</td>
                         <td data-label="Themes">
                             <ul>
                                 <li>Climate Resilient Aquaculture Protection</li>
@@ -449,7 +462,36 @@
                         </td>
                     </tr>
                     <tr>
-                        <td data-label="Track.No">Track 10</td>
+                        <td data-label="Track.No">Track 10: Phyto Pharmaceutical Developments</td>
+                        <td data-label="Themes">
+                            <ul>
+                                <li>Smart Sensors for Phytochemical Extraction</li>
+                                <li>Robotics and Automation for Extraction Processes</li>
+                                <li>Power Electronics for Sustainable Phytoextraction</li>
+                                <li>Electrical Safety in Phytochemical Processing</li>
+                                <li>Optimization Models for Phytochemical Extraction</li>
+                                <li>Novel Extraction Techniques for Phytochemicals</li>
+                                <li>Scale-Up of Phytochemical Production Processes</li>
+                                <li>Green Solvents and Recycling in Phytoextraction</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td data-label="Track.No">Track 11: Dairy Technology</td>
+                        <td data-label="Themes">
+                            <ul>
+                                <li>Sustainable Dairy production</li>
+                                <li>Advanced dairy product quality control</li>
+                                <li>Supply chain management in the dairy industry</li>
+                                <li>Advancement of bio-sensors for monitoring milk quality and safety</li>
+                                <li>Innovations in dairy products packaging</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td data-label="Track.No">Track 12: Leadership & Management</td>
                         <td data-label="Themes">
                             <ul>
                                 <li>Leadership and Organizational Transformation</li>
@@ -468,6 +510,8 @@
                             </ul>
                         </td>
                     </tr>
+
+
                 </tbody>
             </table>
         </section>
